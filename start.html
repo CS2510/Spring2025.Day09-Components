@@ -21,16 +21,19 @@
   <script src="./engine/Input.js"></script>
   <script src="./engine/Scene.js"></script>
 
-  <script src="./game/ControllerGameObject.js"></script>
-  <script src="./game/ControllerGameObject2.js"></script>
-  <script src="./game/LevelNumberGameObject.js"></script>
-  <script src="./game/ScoreGameObject.js"></script>
-  <script src="./game/GuardGameObject.js"></script>
-  <script src="./game/PlayerGameObject.js"></script>
-  <script src="./game/MainScene.js"></script>
-  <script src="./game/SecondScene.js"></script>
-  <script src="./game/DeathScene.js"></script>
-  <script src="./game/WinScene.js"></script>
+  <script src="./game/gameObjects/ControllerGameObject.js"></script>
+  <script src="./game/gameObjects/LevelNumberGameObject.js"></script>
+  <script src="./game/gameObjects/ScoreGameObject.js"></script>
+  <script src="./game/gameObjects/GuardGameObject.js"></script>
+  <script src="./game/gameObjects/PlayerGameObject.js"></script>
+  <script src="./game/gameObjects/WinTextGameObject.js"></script>
+  <script src="./game/gameObjects/DeathTextGameObject.js"></script>
+  <script src="./game/gameObjects/WinController.js"></script>
+  <script src="./game/gameObjects/DeathController.js"></script>
+
+  <script src="./game/scenes/MainScene.js"></script>
+  <script src="./game/scenes/DeathScene.js"></script>
+  <script src="./game/scenes/WinScene.js"></script>
 
   <script>
 
@@ -38,14 +41,12 @@
     // Engine-specific state variables
     let canvas
     let ctx
-
     
     //Game loop (engine code)
     function tick() {
         Engine.currentScene.update()
         Engine.currentScene.draw()
     }
-
 
     /**
      * Setup the internals for the controller and view to run (engine code)
